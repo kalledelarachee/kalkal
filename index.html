@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Love Confession</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="fade-in">Click the button to see my feelings for you</h1>
+
+    <button id="revealButton" class="fade-in delay-1s">Reveal</button>
+
+
+
+    <div id="heartContainer" class="hidden">
+
+      <div class="heart pulse"></div>
+
+      <p class="fade-in delay-2s">I love you!</p>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    document.getElementById('revealButton').addEventListener('click', function () {
+
+      const container = document.getElementById('heartContainer');
+
+      container.classList.remove('hidden');
+
+
+
+      // Optional: Restart animation classes when shown
+
+      container.querySelector('.heart').classList.add('pulse');
+
+      container.querySelector('p').classList.add('fade-in', 'delay-2s');
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
